@@ -53,3 +53,4 @@ To install newly created module, change repository section
    ...
 }
 ```
+and run `composer install vendor/module`
