@@ -38,3 +38,4 @@ vendor/module
    ...
 }
 ```
+Note: It's best to add `src/` path to shop project's `.gitignore` to prevent any accidential commits
