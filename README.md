@@ -1,4 +1,7 @@
-# magento-2-dev-doc
+# magento-2-dev-doc - miscellaneous dev task flows for magento 2 development
+
+## contents
+1. [module development](#magento-2-module-development)
 
 ## magento 2 module development (in project)
 * create custom directory in project root
