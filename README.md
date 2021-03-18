@@ -41,3 +41,15 @@ vendor/module
 Note: It's best to add `src/` path to shop project's `.gitignore` to prevent any accidential commits  
   
 If you run into issues, its best to run `composer remove vendor/module` and `composer install vendor/module` again.
+
+To install newly created module, change repository section
+```
+"repositories": {
+   ...
+   "vendor.module": {
+       "type": "vcs|git",
+       "url": "{url}"
+   }
+   ...
+}
+```
