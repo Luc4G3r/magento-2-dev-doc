@@ -3,7 +3,7 @@
 ## contents
 1. [module development](#magento-2-module-development)
 
-## magento 2 module development (in project)
+## magento-2-module-development (in project)
 * create custom directory in project root
   * f.e. `src/`
 * add custom module to `src/` directory
