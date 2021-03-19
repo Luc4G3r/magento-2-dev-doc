@@ -1,23 +1,25 @@
 # magento-2-dev-doc - miscellaneous dev task flows for magento 2 development
 
-## contents
-1. [command line reference](#command-line-reference)
-2. [module development](#module-development)
+## List of contents
+1. [Command line reference](#command-line-reference)
+2. [Module development](#module-development)
 
-## command line reference
+## Command line reference
 For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands.html) or run `bin/magento list`
 
-## module development
-* consider using [Mage2Gen module generator cli tool](https://pypi.org/project/Mage2Gen/) or [Silksoftware module creator online tool](https://modulecreator.silksoftware.com/magento-module-creator/magento2-module-creator.php)
-* [module development documentation](https://devdocs.magento.com/videos/fundamentals/create-a-new-module/)
-### within project
-* create custom directory in project root
+## Module development
+* Consider using [Mage2Gen module generator cli tool](https://pypi.org/project/Mage2Gen/) or [Silksoftware module creator online tool](https://modulecreator.silksoftware.com/magento-module-creator/magento2-module-creator.php)
+* [Module development documentation](https://devdocs.magento.com/videos/fundamentals/create-a-new-module/)
+### In webshop package
+* Create custom `vendor/module` directory in `app/code` folder
+### Git package within project
+* Create custom directory in project root
   * f.e. `src/`
-* add custom module to `src/` directory
+* Add custom module to `src/` directory
 ```
 vendor/module
 ```
-* update `composer.json` `autoload-dev` section with namespace and path
+* Update `composer.json` `autoload-dev` section with namespace and path
 ```
 "autoload-dev": {
    ...
@@ -29,7 +31,7 @@ vendor/module
    ...
 }
 ```
-* add module to `require` section
+* Add module to `require` section
 ```
 "require": {
    ...
@@ -37,7 +39,7 @@ vendor/module
    ...
 }
 ```
-* add a path to `repository` section
+* Add a path to `repository` section
 ```
 "repositories": {
    ...
