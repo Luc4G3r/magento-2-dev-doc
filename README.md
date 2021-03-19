@@ -1,8 +1,8 @@
 # magento-2-dev-doc - miscellaneous dev task flows for magento 2 development
 
 ## contents
-1. [command line reference](https://pypi.org/project/Mage2Gen/)
-2. [module development](#magento-2-module-development)
+1. [command line reference](#command line reference)
+2. [module development](#module development)
 
 ## command line reference
 For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands.html) or run `bin/magento list`
