@@ -3,6 +3,9 @@
 ## contents
 1. [module development](#magento-2-module-development)
 
+## magento 2 command line reference
+For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands.html) or run `bin/magento list`
+
 ## magento 2 module development (in project)
 * create custom directory in project root
   * f.e. `src/`
