@@ -1,8 +1,13 @@
 # magento-2-dev-doc - miscellaneous dev task flows for magento 2 development
 
 ## List of contents
-1. [Command line reference](#command-line-reference)
-2. [Module development](#module-development)
+1. [Installation](#installation)
+2. [Command line reference](#command-line-reference)
+3. [Module development](#module-development)
+
+## Installation
+Clone git / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html)
+* run `bin/magento setup:install --base-url=... --base-url-secure=... --language=de_DE --currency=EUR --timezone=Europe/Berlin --admin-user=... --admin-firstname=... --admin-lastname=... --admin-email=... --admin-password=... --use-rewrites=0 --db-host=127.0.0.1 --db-user=... --db-name=one2buy --db-password=... --search-engine=elasticsearch7 --elasticsearch-host=127.0.0.1 --elasticsearch-port=9200`
 
 ## Command line reference
 For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands.html) or run `bin/magento list`
