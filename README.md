@@ -59,7 +59,7 @@ Note: It's best to add `src/` path to shop project's `.gitignore` to prevent any
   
 If you run into issues, its best to run `composer remove vendor/module` and `composer install vendor/module` again.
 
-To install newly created module, change repository section
+To install newly created module, change repositories section
 ```
 "repositories": {
    ...
