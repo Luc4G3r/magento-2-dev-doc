@@ -78,3 +78,4 @@ To install newly created module, change repositories section
 and run `composer install vendor/module`
 
 ## Deployment
+[See sample deploy.sh](https://github.com/Luc4G3r/magento-2-dev-doc/blob/main/SAMPLES/deploy.sh)
