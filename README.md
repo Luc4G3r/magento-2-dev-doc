@@ -12,6 +12,9 @@ Clone git / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-
 ## Command line reference
 For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands.html) or run `bin/magento list`
 
+## Performance considerations
+[See this link](https://www.atwix.com/magento-2/ways-to-make-theme-faster/)
+
 ## Module development
 * Consider using [Mage2Gen module generator cli tool](https://pypi.org/project/Mage2Gen/) or [Silksoftware module creator online tool](https://modulecreator.silksoftware.com/magento-module-creator/magento2-module-creator.php)
 * [Module development documentation](https://devdocs.magento.com/videos/fundamentals/create-a-new-module/)
