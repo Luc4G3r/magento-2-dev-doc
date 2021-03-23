@@ -3,7 +3,8 @@
 ## List of contents
 1. [Installation](#installation)
 2. [Command line reference](#command-line-reference)
-3. [Module development](#module-development)
+3. [Performance considerations](#performance-considerations)
+4. [Module development](#module-development)
 
 ## Installation
 Clone git / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html)
