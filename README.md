@@ -5,6 +5,7 @@
 2. [Command line reference](#command-line-reference)
 3. [Performance considerations](#performance-considerations)
 4. [Module development](#module-development)
+5. [Deployment](#deployment)
 
 ## Installation
 Clone git / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html)
@@ -75,3 +76,5 @@ To install newly created module, change repositories section
 }
 ```
 and run `composer install vendor/module`
+
+## Deployment
