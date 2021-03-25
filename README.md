@@ -39,7 +39,7 @@ vendor/module
    ...
 }
 ```
-* Add a path to `repository` section
+* Add dev and git paths to `repository` section
 ```
 "repositories": {
    ...
