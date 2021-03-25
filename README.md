@@ -1,4 +1,5 @@
-# magento-2-dev-doc - miscellaneous dev task flows for magento 2 development
+# magento-2-dev-doc
+miscellaneous dev task flows for magento 2 development
 
 ## List of contents
 1. [Installation](#installation)
