@@ -25,7 +25,8 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
 * Create custom `vendor/module` directory in `app/code` folder
 ### Git package within project
 * Create custom directory in project root
-  * f.e. `src/`
+  * f.e. `src/`  
+**_NOTE: It's best to add `src/` path to shop project's `.gitignore` to prevent any accidential commits_**  
 * Add custom module to `src/` directory
 ```
 vendor/module
@@ -54,21 +55,10 @@ vendor/module
 ```
 "repositories": {
    ...
-   "vendor.module": {
+   "vendor.module-dev": {
        "type": "path",
        "url": "src/vendor/module"
-   }
-   ...
-}
-```
-**_NOTE: It's best to add `src/` path to shop project's `.gitignore` to prevent any accidential commits_**  
-  
-If you run into issues, its best to run `composer remove vendor/module` and `composer install vendor/module` again.
-
-To install newly created module, change repositories section
-```
-"repositories": {
-   ...
+   },
    "vendor.module": {
        "type": "vcs|git",
        "url": "{url}"
@@ -76,7 +66,11 @@ To install newly created module, change repositories section
    ...
 }
 ```
-and run `composer install vendor/module`
+Composer automatically preferences `path` type repositories, so in development it should always load from the path if it exists.  
+On the other hand, if the module path does not exist, composer will then try to fetch from the version control system.  
+If you run into issues, its best to run `composer remove vendor/module` and `composer install vendor/module` again.
+
+To install run `composer install vendor/module`
 
 ## Deployment
 [See sample deploy.sh](https://github.com/Luc4G3r/magento-2-dev-doc/blob/main/SAMPLES/deploy.sh)
