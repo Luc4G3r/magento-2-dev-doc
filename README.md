@@ -31,7 +31,8 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
 ```
 vendor/module
 ```
-* Update `composer.json` `autoload-dev` section with namespace and path
+* Update `composer.json` `autoload-dev` section with namespace and path  
+**_NOTE: This might not be needed, as composer will symlink the module in vendor folder with below settings_**
 ```
 "autoload-dev": {
    ...
