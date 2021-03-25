@@ -61,7 +61,7 @@ vendor/module
    ...
 }
 ```
-Note: It's best to add `src/` path to shop project's `.gitignore` to prevent any accidential commits  
+**_NOTE: It's best to add `src/` path to shop project's `.gitignore` to prevent any accidential commits_**  
   
 If you run into issues, its best to run `composer remove vendor/module` and `composer install vendor/module` again.
 
