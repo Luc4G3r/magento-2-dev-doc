@@ -43,20 +43,31 @@ vendor/module
 ```
 "repositories": {
    ...
-   "vendor.module-dev": {
-       "type": "path",
-       "url": "src/vendor/module"
-   },
    "vendor.module": {
-       "type": "vcs|git",
-       "url": "{url}"
-   }
+            "type": "package",
+            "package": {
+                "name": "vendor/module",
+                "version": "x.x.x",
+                "source": {
+                    "type": "vcs|git",
+                    "url": "{url}",
+                    "reference": "x.x.x"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "src/vendor/module",
+                    "options": {
+                        "symlink": true
+                    }
+                }
+            }
+        },
    ...
 }
 ```
-Composer automatically preferences `path` type repositories, so in development it should always load from the path if it exists.  
-On the other hand, if the module path does not exist, composer will then try to fetch from the version control system.  
-If you run into issues, its best to run `composer remove vendor/module` and `composer install vendor/module` again.
+Composer automatically preferences `dist` for packages, so in development it should always load from the path if it exists.  
+On the other hand, if the module path does not exist, composer will then try to fetch from the `source`.  
+If you run into issues, its best to run `composer require vendor/module` or `composer remove vendor/module` and `composer install vendor/module` again.
 
 To install run `composer install vendor/module`
 
