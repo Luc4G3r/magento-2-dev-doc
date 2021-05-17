@@ -65,7 +65,7 @@ vendor/module
    ...
 }
 ```
-[It might be possible to do this easier](https://laracasts.com/discuss/channels/general-discussion/switch-composer-package-from-vcs-to-path-and-back)
+[It might be possible to do this easier](https://laracasts.com/discuss/channels/general-discussion/switch-composer-package-from-vcs-to-path-and-back)  
 Composer automatically preferences `dist` for packages, so in development it should always load from the path if it exists.  
 On the other hand, if the module path does not exist, composer will then try to fetch from the `source`.  
 If you run into issues, its best to run `composer require vendor/module` or `composer remove vendor/module` and `composer install vendor/module` again.
