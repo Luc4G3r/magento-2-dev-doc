@@ -6,8 +6,11 @@ echo 'set rights'
 
 php -v
 
-chmod -R 755 httpdocs/
 chown -R user:group httpdocs/
+chmod -R 755 httpdocs/
+find . -type d -exec chmod 770 {} \;
+find . -type f -exec chmod 660 {} \;
+chmod u+x bin/magento
 
 echo '---------------------------------------------------------'
 
