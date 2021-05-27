@@ -59,6 +59,14 @@ vendor/module
                     "options": {
                         "symlink": true
                     }
+                },
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Vendor\\Module\\": ""
+                    }
                 }
             }
         },
