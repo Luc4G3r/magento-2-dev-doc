@@ -5,8 +5,9 @@ miscellaneous dev task flows for magento 2 development
 1. [Installation](#installation)
 2. [Command line reference](#command-line-reference)
 3. [Performance considerations](#performance-considerations)
-4. [Module development](#module-development)
-5. [Deployment](#deployment)
+4. [Quality Tools](#quality-tools)
+5. [Module development](#module-development)
+6. [Deployment](#deployment)
 
 ## Installation
 Clone git / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html)
@@ -17,6 +18,23 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
 
 ## Performance considerations
 [See this link](https://www.atwix.com/magento-2/ways-to-make-theme-faster/)
+
+## Quality tools
+* I highly recomment to have following tools in `"require-dev"` section of `composer.json`:  
+```
+    "require-dev": {
+        ...
+        "friendsofphp/php-cs-fixer": "*",
+        "magento/magento-coding-standard": "*",
+        "magento/magento2-functional-testing-framework": "*",
+        "phpmd/phpmd": "*",
+        "phpstan/phpstan": "*",
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "*"
+        ...
+    },
+```
+* All of these tools are configurable with PHPStorm and have own documentations
 
 ## Module development
 * Consider using [Mage2Gen module generator cli tool](https://pypi.org/project/Mage2Gen/) or [Silksoftware module creator online tool](https://modulecreator.silksoftware.com/magento-module-creator/magento2-module-creator.php)
