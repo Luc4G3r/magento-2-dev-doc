@@ -119,24 +119,64 @@ To install run `composer install vendor/module`
 * Create designs within the directory by
     * Adding subdirectory like `vendor/design_name`
     * Adding `registration.php`
-    <details>
-        <summary><i>expand</i></summary>
-        
-    ```
-            <?php
-            \Magento\Framework\Component\ComponentRegistrar::register(
-            \Magento\Framework\Component\ComponentRegistrar::THEME,
-            'frontend/vendor/design_name',
-            __DIR__
-            );     
-    ```        
-        
-    </details>    
+        <details>
+            <summary><i>expand</i></summary>
+
+        ```
+                <?php
+                \Magento\Framework\Component\ComponentRegistrar::register(
+                \Magento\Framework\Component\ComponentRegistrar::THEME,
+                'frontend/vendor/design_name',
+                __DIR__
+                );     
+        ```        
+
+        </details>
+
+    * Adding `theme.xml`
+        <details>
+            <summary><i>expand</i></summary>
+
+        ```
+            <theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+                <title>{{THEME TILE}}</title>
+                <parent>Magento/blank</parent> <!-- This can be any installed theme -->
+                <media>
+                    <preview_image>/media/theme/preview/preview_image.jpeg</preview_image> <!-- relative to the themes directory -->
+                </media>
+            </theme>
+        ```
+
+        </details>    
 </details>
 <details>
     <summary><b>Common design tasks</b></summary>
 
-* 
+* Overriding layout/ template files:
+    * To override those files, see their original path in the vendor module
+    * You can then place a file in your theme under `Vendor_Module/layout`, `Vendor_Module/templates`, etc.
+    * Omit the area in the file path (as the theme is based on an area already)
+    * Examples
+        <details>
+                <summary><i>Example 1</i></summary>
+
+        * To replace `vendor/magento/module-theme/view/frontend/templates/html/footer.phtml`, copy it to `app/design/frontend/vendor/design-name/Magento_Theme/view/templates/html/footer.phtml`
+
+        </details>
+
+        <details>
+                <summary><i>Example 2</i></summary>
+
+        * To replace `vendor/magento/module-theme/view/frontend/templates/html/topmenu.phtml`, copy it to `app/design/frontend/vendor/design-name/Magento_Theme/view/templates/html/topmenu.phtml`
+
+        </details>
+ 
+        <details>
+                <summary><i>Example 3</i></summary>
+
+        * To replace `vendor/magento/module-theme/view/frontend/layout/default.xml`, copy it to `app/design/frontend/vendor/design-name/Magento_Theme/layout/default.xml`
+
+        </details>
 </details>
 
 ## Deployment
