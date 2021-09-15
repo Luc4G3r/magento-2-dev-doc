@@ -22,24 +22,24 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
 
 ## Quality tools
 * I highly recomment to have following tools in `"require-dev"` section of `composer.json`:  
-<details>
-    <summary><i>expand</i></summary>
+    <details>
+        <summary><i>expand</i></summary>
 
-```
-    "require-dev": {
-        ...
-        "friendsofphp/php-cs-fixer": "*",
-        "magento/magento-coding-standard": "*",
-        "magento/magento2-functional-testing-framework": "*",
-        "phpmd/phpmd": "*",
-        "phpstan/phpstan": "*",
-        "phpunit/phpunit": "*",
-        "squizlabs/php_codesniffer": "*"
-        ...
-    },
-```
+    ```
+        "require-dev": {
+            ...
+            "friendsofphp/php-cs-fixer": "*",
+            "magento/magento-coding-standard": "*",
+            "magento/magento2-functional-testing-framework": "*",
+            "phpmd/phpmd": "*",
+            "phpstan/phpstan": "*",
+            "phpunit/phpunit": "*",
+            "squizlabs/php_codesniffer": "*"
+            ...
+        },
+    ```
     
-</details>
+    </details>
 
 * All of these tools are configurable with PHPStorm and have own documentations
 
@@ -65,44 +65,44 @@ vendor/module
 }
 ```
 * Add dev and git paths to `repository` section
-<details>
-    <summary><i>expand</i></summary>
+    <details>
+        <summary><i>expand</i></summary>
 
-```
-"repositories": {
-   ...
-   "vendor.module": {
-            "type": "package",
-            "package": {
-                "name": "vendor/module",
-                "version": "x.x.x",
-                "source": {
-                    "type": "vcs|git",
-                    "url": "{url}",
-                    "reference": "x.x.x"
-                },
-                "dist": {
-                    "type": "path",
-                    "url": "src/vendor/module",
-                    "options": {
-                        "symlink": true
-                    }
-                },
-                "autoload": {
-                    "files": [
-                        "registration.php"
-                    ],
-                    "psr-4": {
-                        "Vendor\\Module\\": ""
+    ```
+    "repositories": {
+       ...
+       "vendor.module": {
+                "type": "package",
+                "package": {
+                    "name": "vendor/module",
+                    "version": "x.x.x",
+                    "source": {
+                        "type": "vcs|git",
+                        "url": "{url}",
+                        "reference": "x.x.x"
+                    },
+                    "dist": {
+                        "type": "path",
+                        "url": "src/vendor/module",
+                        "options": {
+                            "symlink": true
+                        }
+                    },
+                    "autoload": {
+                        "files": [
+                            "registration.php"
+                        ],
+                        "psr-4": {
+                            "Vendor\\Module\\": ""
+                        }
                     }
                 }
-            }
-        },
-   ...
-}
-```
-    
-</details>
+            },
+       ...
+    }
+    ```
+
+    </details>
 
 [It might be possible to do this easier](https://laracasts.com/discuss/channels/general-discussion/switch-composer-package-from-vcs-to-path-and-back)  
 Composer automatically preferences `dist` for packages, so in development it should always load from the path if it exists.  
@@ -118,13 +118,25 @@ To install run `composer install vendor/module`
     
 * Create designs within the directory by
     * Adding subdirectory like `vendor/design_name`
-    * Adding registration
-
+    * Adding `registration.php`
+    <details>
+        <summary><i>expand</i></summary>
+        
+    ```
+            <?php
+            \Magento\Framework\Component\ComponentRegistrar::register(
+            \Magento\Framework\Component\ComponentRegistrar::THEME,
+            'frontend/vendor/design_name',
+            __DIR__
+            );     
+    ```        
+        
+    </details>    
 </details>
 <details>
     <summary><b>Common design tasks</b></summary>
 
-* Test
+* 
 </details>
 
 ## Deployment
