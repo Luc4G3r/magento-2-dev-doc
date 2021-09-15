@@ -7,7 +7,8 @@ miscellaneous dev task flows for magento 2 development
 3. [Performance considerations](#performance-considerations)
 4. [Quality Tools](#quality-tools)
 5. [Module development](#module-development)
-6. [Deployment](#deployment)
+6. [Design tasks](#design-tasks)
+7. [Deployment](#deployment)
 
 ## Installation
 Clone git / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html)
@@ -21,6 +22,9 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
 
 ## Quality tools
 * I highly recomment to have following tools in `"require-dev"` section of `composer.json`:  
+<details>
+    <summary><i>expand</i></summary>
+
 ```
     "require-dev": {
         ...
@@ -34,6 +38,9 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
         ...
     },
 ```
+    
+</details>
+
 * All of these tools are configurable with PHPStorm and have own documentations
 
 ## Module development
@@ -58,6 +65,9 @@ vendor/module
 }
 ```
 * Add dev and git paths to `repository` section
+<details>
+    <summary><i>expand</i></summary>
+
 ```
 "repositories": {
    ...
@@ -91,12 +101,31 @@ vendor/module
    ...
 }
 ```
+    
+</details>
+
 [It might be possible to do this easier](https://laracasts.com/discuss/channels/general-discussion/switch-composer-package-from-vcs-to-path-and-back)  
 Composer automatically preferences `dist` for packages, so in development it should always load from the path if it exists.  
 On the other hand, if the module path does not exist, composer will then try to fetch from the `source`.  
 If you run into issues, its best to run `composer require vendor/module` or `composer remove vendor/module` and `composer install vendor/module` again.
 
 To install run `composer install vendor/module`
+
+## Design tasks
+
+<details>
+    <summary><b>How <i>app/design/</i> directory works</b></summary>
+    
+* Create designs within the directory by
+    * Adding subdirectory like `vendor/design_name`
+    * Adding registration
+
+</details>
+<details>
+    <summary><b>Common design tasks</b></summary>
+
+* Test
+</details>
 
 ## Deployment
 [See sample deploy.sh](https://github.com/Luc4G3r/magento-2-dev-doc/blob/main/SAMPLES/deploy.sh)
