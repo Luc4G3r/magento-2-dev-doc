@@ -7,8 +7,9 @@ miscellaneous dev task flows for magento 2 development
 3. [Performance considerations](#performance-considerations)
 4. [Quality Tools](#quality-tools)
 5. [Module development](#module-development)
-6. [Design tasks](#design-tasks)
-7. [Deployment](#deployment)
+6. [Development tasks](#development-tasks)
+7. [Design tasks](#design-tasks)
+8. [Deployment](#deployment)
 
 ## Installation
 Clone git / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html)
@@ -57,6 +58,11 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
 `composer config repositories.dev-extensions path src/\*`  
 `dev-extensions` can be anything  
 * Install with `composer require vendor/module`
+
+## Development tasks
+<details>
+    <summary><b>di.xml</b></summary>
+</details>
 
 ## Design tasks
 
