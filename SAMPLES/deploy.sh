@@ -15,15 +15,12 @@ chmod u+x bin/magento
 echo '---------------------------------------------------------'
 
 php httpdocs/bin/magento maintenance:enable
-cd httpdocs/
 
+cd httpdocs/
 git pull
 
-pwd
 php composer install --no-cache --no-dev
-
 cd ..
-pwd
 
 echo '---------------------------------------------------------'
 
