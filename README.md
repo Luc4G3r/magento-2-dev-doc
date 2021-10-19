@@ -56,7 +56,7 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
 * Add custom module to `src/Vendor_Module/` directory
 * Add as package to composer
 ```
-composer config repositories.vendor.module -j '{
+composer2 config repositories.vendor.module -j '{
             "type": "package",
             "package": {
                 "name": "vendor/module",
@@ -82,9 +82,9 @@ composer config repositories.vendor.module -j '{
             }
         }'
 ```
-* Install with `composer require vendor/module`
-* In development run `composer install` with `--prefer-dist`
-* In production run `composer install` with `--prefer-source`
+* Install with `composer2 require vendor/module`
+* In development run `composer2 install` with `--prefer-dist`
+* In production run `composer2 install` with `--prefer-source`
 
 ## Development tasks
 <details>
