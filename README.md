@@ -44,72 +44,19 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
 * All of these tools are configurable with PHPStorm and have own documentations
 
 ## Module development
-* Consider using [Mage2Gen module generator cli tool](https://pypi.org/project/Mage2Gen/) or [Silksoftware module creator online tool](https://modulecreator.silksoftware.com/magento-module-creator/magento2-module-creator.php)
+* Consider using [Silksoftware module creator online tool](https://modulecreator.silksoftware.com/magento-module-creator/magento2-module-creator.php)
 * [Module development documentation](https://devdocs.magento.com/videos/fundamentals/create-a-new-module/)
 ### In webshop package
 * Create custom `vendor/module` directory in `app/code` folder
-### Git package within project
+### Git/ composer package within project (*recommended*)
 * Create custom directory in project root
   * f.e. `src/`  
-**_NOTE: It's best to add `src/` path to shop project's `.gitignore` to prevent any accidential commits_**  
-* Add custom module to `src/` directory
-```
-vendor/module
-```
-* Add module to `require` section
-```
-"require": {
-   ...
-   "vendor/module": "version"
-   ...
-}
-```
-* Add dev and git paths to `repository` section
-    <details>
-        <summary><i>expand</i></summary>
-
-    ```
-    "repositories": {
-       ...
-       "vendor.module": {
-                "type": "package",
-                "package": {
-                    "name": "vendor/module",
-                    "version": "x.x.x",
-                    "source": {
-                        "type": "vcs|git",
-                        "url": "{url}",
-                        "reference": "x.x.x"
-                    },
-                    "dist": {
-                        "type": "path",
-                        "url": "src/vendor/module",
-                        "options": {
-                            "symlink": true
-                        }
-                    },
-                    "autoload": {
-                        "files": [
-                            "registration.php"
-                        ],
-                        "psr-4": {
-                            "Vendor\\Module\\": ""
-                        }
-                    }
-                }
-            },
-       ...
-    }
-    ```
-
-    </details>
-
-[It might be possible to do this easier](https://laracasts.com/discuss/channels/general-discussion/switch-composer-package-from-vcs-to-path-and-back)  
-Composer automatically preferences `dist` for packages, so in development it should always load from the path if it exists.  
-On the other hand, if the module path does not exist, composer will then try to fetch from the `source`.  
-If you run into issues, its best to run `composer require vendor/module` or `composer remove vendor/module` and `composer install vendor/module` again.
-
-To install run `composer install vendor/module`
+**_NOTE: Add this path to shop project's `.gitignore` to prevent any accidential commits_**  
+* Add custom module to `src/Vendor_Module/` directory
+* Add the development folder as path to composer
+`composer config repositories.dev-extensions path src/\*`  
+`dev-extensions` can be anything  
+* Install with `composer require vendor/module`
 
 ## Design tasks
 
