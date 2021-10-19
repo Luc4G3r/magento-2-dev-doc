@@ -54,10 +54,37 @@ For a list of magento 2 commands [look here](https://devdocs.magento.com/guides/
   * f.e. `src/`  
 **_NOTE: Add this path to shop project's `.gitignore` to prevent any accidential commits_**  
 * Add custom module to `src/Vendor_Module/` directory
-* Add the development folder as path to composer
-`composer config repositories.dev-extensions path src/\*`  
-`dev-extensions` can be anything  
+* Add as package to composer
+```
+composer config repositories.vendor.module -j '{
+            "type": "package",
+            "package": {
+                "name": "vendor/module",
+                "version": "dev-master",
+                "source": {
+                    "type": "git",
+                    "url": "ssh://git@{URL:PORT}/vendor-module.git",
+                    "reference": "master"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "src/Vendor_Module",
+                    "options": {
+                        "symlink": true
+                    }
+                },
+                "autoload": {
+                    "files": ["registration.php"],
+                    "psr-4": {
+                        "Vendor\\Module\\": ""
+                    }
+                }
+            }
+        }'
+```
 * Install with `composer require vendor/module`
+* In development run `composer install` with `--prefer-dist`
+* In production run `composer install` with `--prefer-source`
 
 ## Development tasks
 <details>
