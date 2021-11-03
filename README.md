@@ -10,6 +10,7 @@ miscellaneous dev task flows for magento 2 development
 6. [Development tasks](#development-tasks)
 7. [Design tasks](#design-tasks)
 8. [Deployment](#deployment)
+9. [Useful 3rd party extensions](#useful-3rd-party-extensions)
 
 ## Installation
 Clone git / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html)
@@ -161,3 +162,15 @@ composer2 config repositories.vendor.module -j '{
 
 ## Deployment
 [See sample deploy.sh](https://github.com/Luc4G3r/magento-2-dev-doc/blob/main/SAMPLES/deploy.sh)
+
+## Useful 3rd party extensions
+
+### Weltpixel
+* [Responsive Banner Slider & Owl Carousel](https://marketplace.magento.com/weltpixel-m2-weltpixel-owl-carousel-slider.html)
+* [Ajax Cart & Quick View](https://marketplace.magento.com/weltpixel-m2-weltpixel-quickview.html)
+* [Lazy Load Products & Images](https://marketplace.magento.com/weltpixel-m2-weltpixel-lazyload.html)
+
+### Fooman
+* [Email Attachments](https://marketplace.magento.com/fooman-emailattachments-m2.html)
+* [Print Order PDF](https://marketplace.magento.com/fooman-printorderpdf-m2.html)
+
