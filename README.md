@@ -15,7 +15,7 @@ miscellaneous dev task flows for magento 2 development
 ## Installation
 Clone [repository](https://github.com/magento/magento2) / [Use install guide](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html)
 ### Composer installation
-* `php composer2 create-project magento/magento2 {PATH} "{VERSION} --no-install`
+* `php composer2 create-project magento/magento2 {PATH} "{VERSION}" --no-install`
 * `cd {PATH}`
 * `composer2 install`
 * `bin/magento setup:install --base-url=... --base-url-secure=... --language=de_DE --currency=EUR --timezone=Europe/Berlin --admin-user=... --admin-firstname=... --admin-lastname=... --admin-email=... --admin-password=... --use-rewrites=0 --db-host=127.0.0.1 --db-user=... --db-name=one2buy --db-password=... --search-engine=elasticsearch7 --elasticsearch-host=127.0.0.1 --elasticsearch-port=9200`
