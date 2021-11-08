@@ -165,10 +165,21 @@ composer2 config repositories.vendor.module -j '{
 
 ## Useful 3rd party extensions
 
+### Mageplaza
+* [SMTP](https://www.mageplaza.com/magento-2-smtp/)
+* [Better Maintenance](https://www.mageplaza.com/magento-2-better-maintenance/)
+* [Login As Customer](https://www.mageplaza.com/magento-2-login-as-customer/)
+* [Delete Orders](https://www.mageplaza.com/magento-2-delete-orders/)
+* [Google ReCaptcha](https://www.mageplaza.com/magento-2-google-recaptcha/)
+* [Social Login](https://www.mageplaza.com/magento-2-social-login-extension/)
+
 ### Weltpixel
 * [Responsive Banner Slider & Owl Carousel](https://marketplace.magento.com/weltpixel-m2-weltpixel-owl-carousel-slider.html)
 * [Ajax Cart & Quick View](https://marketplace.magento.com/weltpixel-m2-weltpixel-quickview.html)
 * [Lazy Load Products & Images](https://marketplace.magento.com/weltpixel-m2-weltpixel-lazyload.html)
+
+### Sparsh Technologies
+* [Free Shipping Bar](https://marketplace.magento.com/sparsh-magento-2-free-shipping-bar-extension.html)
 
 ### Fooman
 * [Email Attachments](https://marketplace.magento.com/fooman-emailattachments-m2.html)
