@@ -166,6 +166,7 @@ composer2 config repositories.vendor.module -j '{
 ## Useful 3rd party extensions
 
 ### Mageplaza
+#### ![](https://www.mageplaza.com/assets/images/icons/icon-96x96.png) Mageplaza Website
 * [SMTP](https://www.mageplaza.com/magento-2-smtp/)
 * [Better Maintenance](https://www.mageplaza.com/magento-2-better-maintenance/)
 * [Login As Customer](https://www.mageplaza.com/magento-2-login-as-customer/)
@@ -174,14 +175,17 @@ composer2 config repositories.vendor.module -j '{
 * [Social Login](https://www.mageplaza.com/magento-2-social-login-extension/)
 
 ### Weltpixel
+#### ![](https://marketplace.magento.com/static/version1635440317/frontend/Aheadworks/marketplace/en_US/Magento_Theme/favicon.ico) Magento 2 Marketplace
 * [Responsive Banner Slider & Owl Carousel](https://marketplace.magento.com/weltpixel-m2-weltpixel-owl-carousel-slider.html)
 * [Ajax Cart & Quick View](https://marketplace.magento.com/weltpixel-m2-weltpixel-quickview.html)
 * [Lazy Load Products & Images](https://marketplace.magento.com/weltpixel-m2-weltpixel-lazyload.html)
 
 ### Sparsh Technologies
+#### ![](https://marketplace.magento.com/static/version1635440317/frontend/Aheadworks/marketplace/en_US/Magento_Theme/favicon.ico) Magento 2 Marketplace
 * [Free Shipping Bar](https://marketplace.magento.com/sparsh-magento-2-free-shipping-bar-extension.html)
 
 ### Fooman
+#### ![](https://marketplace.magento.com/static/version1635440317/frontend/Aheadworks/marketplace/en_US/Magento_Theme/favicon.ico) Magento 2 Marketplace
 * [Email Attachments](https://marketplace.magento.com/fooman-emailattachments-m2.html)
 * [Print Order PDF](https://marketplace.magento.com/fooman-printorderpdf-m2.html)
 
