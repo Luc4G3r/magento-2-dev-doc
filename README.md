@@ -193,3 +193,8 @@ composer2 config repositories.vendor.module -j '{
 * [Email Attachments](https://marketplace.magento.com/fooman-emailattachments-m2.html)
 * [Print Order PDF](https://marketplace.magento.com/fooman-printorderpdf-m2.html)
 
+### Github OpenSource
+#### ![](https://github.githubassets.com/favicons/favicon.png) Github :heart:
+* [Regenerate URL Rewrites](https://github.com/olegkoval/magento2-regenerate_url_rewrites)
+* [URL Deduplication](https://github.com/cadencelabs/urldedup)
+
