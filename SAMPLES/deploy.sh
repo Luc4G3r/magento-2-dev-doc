@@ -7,32 +7,44 @@ then
   export $(cat "$SCRIPTPATH"/.deploy_env | sed 's/#.*//g' | xargs)
 fi
 
-if [[ -z "${user}" ]]; then
-  echo "Please set user variable in .deploy_env"
+if [ -z "${user}" ]
+then
+  echo "Please set 'user' variable in .deploy_env"
   exit
 fi
 
-if [[ -z "${group}" ]]; then
+if [ -z "${group}" ]
+then
+  echo "'group' variable not set in .deploy_env, falling back to default"
   group=$user
 fi
 
-if [[ -z "${git_branch_name}" ]]; then
+if [ -z "${git_branch_name}" ]
+then
+  echo "'git_branch_name' variable not set in .deploy_env, falling back to default"
   git_branch_name=master
 fi
 
-if [[ -z "${magento_root_subdir}" ]]; then
+if [ -z "${magento_root_subdir}" ]
+then
+  echo "'magento_root_subdir' variable not set in .deploy_env, falling back to default"
   magento_root_subdir=httpdocs
 fi
 
-if [[ -z "${php_executable}" ]]; then
+if [ -z "${php_executable}" ]
+then
+  echo "'php_executable' variable not set in .deploy_env, falling back to default"
   php_executable=php
 fi
 
-if [[ -z "${composer_executable}" ]]; then
+if [ -z "${composer_executable}" ]
+then
+  echo "'composer_executable' variable not set in .deploy_env, falling back to default"
   composer_executable=/usr/local/bin/composer
 fi
 
-if [[ -z "${dev_mode}" ]] && [[ true -eq "${dev_mode}" ]]; then
+if [ -z "${dev_mode}" ] && [ 1 -eq "${dev_mode}" ]
+then
   dev_flag=
 else
   dev_flag=--no-dev
@@ -80,5 +92,4 @@ $php_executable $magento_root_subdir/bin/magento maintenance:disable
 echo '---------------------------------------------------------'
 echo 'set rights'
 
-#chmod -R 755 $magento_root_subdir/
 chown -R $user:$group $magento_root_subdir
