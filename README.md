@@ -165,7 +165,7 @@ composer2 config repositories.vendor.module -j '{
 </details>
 
 ## Deployment
-[See sample deploy.sh](https://github.com/Luc4G3r/magento-2-dev-doc/blob/main/SAMPLES/deploy.sh)
+[See sample deploy.sh](https://gist.github.com/Luc4G3r/e36a7f5920e9829fa4fb6531bf7d0b52)
 
 ## Useful 3rd party extensions
 
