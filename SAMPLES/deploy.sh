@@ -28,14 +28,26 @@ if [[ -z "${php_executable}" ]]; then
   php_executable=php
 fi
 
-echo "$user:$group @$git_branch_name in $magento_root_subdir running $php_executable"
+if [[ -z "${composer_executable}" ]]; then
+  composer_executable=/usr/local/bin/composer
+fi
 
-# Sample deploy script
+if [[ -z "${dev_mode}" ]] && [[ true -eq "${dev_mode}" ]]; then
+  dev_flag=
+else
+  dev_flag=--no-dev
+fi
+
+echo dev: $dev_flag
+echo composer: $composer_executable
+
+# Deploy
 
 echo 'set rights'
 
 $php_executable -v
 
+## File rights
 chown -R $user:$group $magento_root_subdir
 chmod -R 755 $magento_root_subdir
 find ./$magento_root_subdir/ -type d -exec chmod 770 {} \;
@@ -45,14 +57,15 @@ chmod u+x ./$magento_root_subdir/bin/magento
 echo '---------------------------------------------------------'
 
 date=`date +"%Y-%m-%d"`
-printf "%s\n" $date | tee -a /$magento_root_subdir/var/log/git_deploy_history.log
+printf "[Deploy on %s]\n" $date | tee -a ./$magento_root_subdir/var/log/git_deploy_history.log
 
+## Magento 2 deploy
 $php_executable $magento_root_subdir/bin/magento maintenance:enable
 
 cd $magento_root_subdir
-git pull origin $git_branch_name >&1 | tee -a /$magento_root_subdir/var/log/git_deploy_history.log
+git pull origin $git_branch_name >&1 | tee -a ./$magento_root_subdir/var/log/git_deploy_history.log
 
-$php_executable composer install --no-cache --no-dev
+$php_executable $composer_executable install --no-cache $dev_flag
 cd ..
 
 echo '---------------------------------------------------------'
